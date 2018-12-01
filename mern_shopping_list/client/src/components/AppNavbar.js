@@ -23,7 +23,6 @@ class AppNavbar extends Component {
 
 //        this.toggle = this.toggle.bind(this);
 //          work around for binding toggle to this is a fat arrow function in the toggle function
-
     toggle = () => {
         this.setState({
             isOpen: !this.state.isOpen
