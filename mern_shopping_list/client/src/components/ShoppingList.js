@@ -13,7 +13,8 @@ class ShoppingList extends Component {
     }
 
     render() {
-        const { items } = this.state;
+        // this.props.item.items is deconstructed to the line below
+        const { items } = this.props.item;
         return (
             <Container>
                 <Button
