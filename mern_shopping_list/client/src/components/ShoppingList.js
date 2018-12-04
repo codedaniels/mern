@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
+import { connect } from 'react-redux';
+import { getItems } from '../actions/itemActions';
 
 class ShoppingList extends Component {
     render() {
@@ -47,4 +49,10 @@ class ShoppingList extends Component {
     }
 }
 
-export default ShoppingList
+const mapStateToProps = (state) => ({
+    item: state.item
+});
+
+
+export default connect(mapStateToProps, { getItems })(ShoppingList);
+                // mapStateToProps - maps the state to a compontent property so you can use this.props.items
