@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
 import { connect } from 'react-redux';
 import { getItems } from '../actions/itemActions';
+import PropTypes from 'prop-types'
 
 class ShoppingList extends Component {
     render() {
@@ -47,6 +48,11 @@ class ShoppingList extends Component {
             </Container>
         )
     }
+}
+
+ShoppingList.propTypes = {
+    getItems: PropTypes.func.isRequired,
+    item: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) => ({
