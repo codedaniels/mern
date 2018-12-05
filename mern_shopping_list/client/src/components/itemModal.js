@@ -57,6 +57,11 @@ class ItemModal extends Component {
                                     onChange={this.onChange}
                                 >
                                 </Input>
+                                <Button
+                                    color="dark"
+                                    style={{marginTop: '2rem'}}
+                                    block
+                                >Add Item</Button>
                             </FormGroup>
                         </Form>
                     </ModalBody>
