@@ -11,6 +11,7 @@ import {
 } from 'reactstrap';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
+import uuid from 'uuid'; // it's used just for now b/c of not being connected to the backend yet
 
 class ItemModal extends Component {
     state = {
@@ -27,6 +28,21 @@ class ItemModal extends Component {
     onChange = (e) => {
         // this.setState(e.target.value);
         this.setState({ [e.target.name]: e.target.value });
+    }
+
+    onSubmit = e => {
+        e.preventDefault();
+        
+        const newItem = {
+            id: uuid(),
+            name: this.setState.name
+        }
+
+        // Add item via addItem action
+        this.props.addItem(newItem);
+
+        // Close modal
+        this.toggle();
     }
 
     render() {
