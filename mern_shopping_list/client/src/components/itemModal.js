@@ -25,7 +25,7 @@ class ItemModal extends Component {
         });
     }
 
-    onChange = (e) => {
+    onChange = e => {
         // this.setState(e.target.value);
         this.setState({ [e.target.name]: e.target.value });
     }
@@ -35,7 +35,7 @@ class ItemModal extends Component {
         
         const newItem = {
             id: uuid(),
-            name: this.setState.name
+            name: this.state.name
         }
 
         // Add item via addItem action
@@ -87,4 +87,8 @@ class ItemModal extends Component {
     }
 }
 
-export default connect()(ItemModal);
+const mapStateToProps = state => ({ 
+    item: state.item
+});
+
+export default connect(mapStateToProps, {addItem})(ItemModal);
