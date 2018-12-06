@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from './types';
 
 export const getItems = () => {
@@ -6,7 +7,7 @@ export const getItems = () => {
     };
 };
 
-export const deleteItem = id => {
+export const deleteItem = id => dispatch => {
     return {
       type: DELETE_ITEM,
       payload: id
