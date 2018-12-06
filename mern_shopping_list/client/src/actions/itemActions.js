@@ -31,10 +31,15 @@ export const addItem = item => dispatch => {
 };
 
 export const deleteItem = id => dispatch => {
-    return {
-      type: DELETE_ITEM,
-      payload: id
-    };
+    axios.delete(`/api/items/${id}`).then(res => 
+        dispatch({
+            type: DELETE_ITEM,
+            payload: id
+        }))
+    // return {
+    //   type: DELETE_ITEM,
+    //   payload: id
+    // };
 };
 
 export const setItemsLoading = () => {
