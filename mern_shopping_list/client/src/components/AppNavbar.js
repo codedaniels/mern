@@ -14,13 +14,7 @@ class AppNavbar extends Component {
     state = {
         isOpen: false
     }
-    // constructor (props) {
-    //     super(props);
-    //     this.state = {
-    //         isOpen: false
-    //     }
-    // since binding is not used for the toggle do not need a constructor
-
+    
 //        this.toggle = this.toggle.bind(this);
 //          work around for binding toggle to this is a fat arrow function in the toggle function
     toggle = () => {

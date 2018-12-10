@@ -11,9 +11,6 @@ export const getItems = () => dispatch => {
                 payload: res.data
             })
             )
-    // return {
-    //   type: GET_ITEMS
-    // };
 };
 
 export const addItem = item => dispatch => {
@@ -24,10 +21,6 @@ export const addItem = item => dispatch => {
             payload: res.data
         })
     );
-    // return {
-    //   type: ADD_ITEM,
-    //   payload: item
-    // };
 };
 
 export const deleteItem = id => dispatch => {
@@ -36,10 +29,6 @@ export const deleteItem = id => dispatch => {
             type: DELETE_ITEM,
             payload: id
         }))
-    // return {
-    //   type: DELETE_ITEM,
-    //   payload: id
-    // };
 };
 
 export const setItemsLoading = () => {
