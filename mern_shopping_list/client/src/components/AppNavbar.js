@@ -14,7 +14,7 @@ class AppNavbar extends Component {
     state = {
         isOpen: false
     }
-    
+
 //        this.toggle = this.toggle.bind(this);
 //          work around for binding toggle to this is a fat arrow function in the toggle function
     toggle = () => {
@@ -47,7 +47,5 @@ class AppNavbar extends Component {
         );
     }
 }
-
-
 
 export default AppNavbar;
